@@ -1,0 +1,981 @@
+/* Навигационная панель */
+
+/* Подключение шрифта */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/Kids52-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Применение шрифта */
+* {
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+/* Убираем стрелку у кнопки выпадающего меню */
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* Размер шрифта для всех ссылок в навигации */
+.nav-link {
+    font-size: 30px;
+}
+
+/* Размер шрифта для элементов выпадающего меню */
+.dropdown-item {
+    font-size: 20px;
+}
+
+/* Адаптивный размер шрифта */
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .dropdown-item {
+        font-size: 12px;
+    }
+
+    #mob-text {
+        text-align: start !important;
+    }
+}
+
+.nav-item {
+    margin-right: 30px;
+}
+
+/* Позиционирование сразу под кнопкой посередине */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+}
+
+/* задаем цвета */
+.navbar {
+    background-color: #ddc192 !important;
+}
+
+.dropdown-menu {
+    background-color: #ddc192 !important;
+}
+
+.nav-link {
+    color: rgb(40, 51, 73) !important;
+}
+
+.nav-link:hover {
+    color: #678edb !important;
+}
+
+.dropdown-item {
+    background-color: #ddc192 !important;
+}
+
+.dropdown-item:hover {
+    color: #678edb !important;
+
+}
+
+/* Hover-эффект только для десктопов */
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        z-index: 1000;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+h1 {
+    cursor: default;
+    display: block;
+    text-align: center;
+    position: relative;
+    margin: 10px 0;
+}
+
+h1 span {
+    position: relative;
+    display: inline-block;
+    font-size: 90px;
+    color: #e2dacc;
+    text-shadow: 0 1px 0 #ffa200, 0 2px 0 #14120e, 0 3px 0 #ffa200;
+    animation: bounce 0.8s ease-in-out infinite alternate;
+}
+
+@media (max-width: 768px) {
+    h1 span {
+        font-size: 40px;
+    }
+}
+
+
+h1 span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+h1 span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+h1 span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+h1 span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+h1 span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+h1 span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+h1 span:nth-child(8) {
+    animation-delay: 0.2s;
+}
+
+h1 span:nth-child(9) {
+    animation-delay: 0.3s;
+}
+
+h1 span:nth-child(10) {
+    animation-delay: 0.4s;
+}
+
+h1 span:nth-child(11) {
+    animation-delay: 0.5s;
+}
+
+h1 span:nth-child(12) {
+    animation-delay: 0.6s;
+}
+
+h1 span:nth-child(13) {
+    animation-delay: 0.7s;
+}
+
+h1 span:nth-child(14) {
+    animation-delay: 0.8s;
+}
+
+@keyframes bounce {
+    100% {
+        top: -10px;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc;
+    }
+}
+
+
+@media (max-width: 768px) {
+    h1>span>span {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    h1>br {
+        display: none !important;
+    }
+}
+
+
+.card {
+    --bs-card-bg: rgb(40, 51, 73);
+    /* Цвет фона */
+    --bs-card-color: #ddc192;
+    /* Цвет текста */
+    --bs-card-border-color: #362941;
+    /* Цвет границы */
+    color: #ddc192;
+}
+
+
+.line {
+    border: none;
+    /* Убираем стандартную рамку */
+    height: 5px;
+    /* Толщина линии */
+    background-color: #fdf4e3;
+    /* Цвет линии */
+    margin: 20px 0;
+    /* Отступы сверху и снизу */
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+@font-face {
+    font-family: 'MyCustomFontm';
+    src: url('fonts/DKCinnabarBrush-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text-full {
+    text-align: justify;
+    text-indent: 40px;
+    /* Отступ первой строки */
+    font-style: normal !important;
+    font-family: 'MyCustomFontm', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    /* Убираем внутренние отступы */
+
+}
+
+@media (max-width: 768px) {
+    .text-full {
+        text-align: justify;
+        text-indent: 20px;
+        font-size: 10px;
+        /* Отступ первой строки */
+        font-style: normal !important;
+        font-family: 'MyCustomFontm', sans-serif;
+
+        margin: 0;
+        padding: 0;
+        /* Убираем внутренние отступы */
+    }
+}
+
+.text-center {
+    font-style: normal !important;
+    font-family: 'MyCustomFontm', sans-serif;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.circle-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    aspect-ratio: 1/1; /* Сохраняем квадратную форму */
+}
+
+.circle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #ff2121;
+    border-radius: 50%;
+    transform-origin: center center; /* Добавлено для стабильности */
+}
+
+.circle-item {
+    position: absolute;
+    width: 25%;
+    height: 18%;
+    left: 50%;
+    top: 55%;
+    margin-left: -12.5%;
+    margin-top: -12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate-circle 10s linear infinite;
+    transform-origin: center center;
+}
+
+/* Остальные стили остаются такими же */
+
+/* Начальные позиции */
+.circle-item:nth-child(1) { --angle: 0deg; }
+.circle-item:nth-child(2) { --angle: 90deg; }
+.circle-item:nth-child(3) { --angle: 180deg; }
+.circle-item:nth-child(4) { --angle: 270deg; }
+
+.circle-item-content {
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 200%;
+    display: grid;
+    grid-template-rows: auto auto; /* Две строки: изображение и текст */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: 
+            rotate(var(--angle))
+            translate(calc(50% * var(--radius)))
+            rotate(calc(-1 * var(--angle)));
+    }
+    100% {
+        transform: 
+            rotate(calc(360deg + var(--angle)))
+            translate(calc(50% * var(--radius)))
+            rotate(calc(-360deg - var(--angle)));
+    }
+}
+
+:root {
+    --radius: 3.1;
+}
+
+.controls {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 500px;
+}
+
+@media (max-width: 576px) {
+    .circle-wrapper {
+        width: 95%;
+        padding-bottom: 95%;
+    }
+    
+    .circle-item {
+        width: 30%;
+        height: 30%;
+        margin-left: -15%;
+        margin-top: -15%;
+    }
+    
+}
+.circle-item-content img {
+    width: 100%;
+    height: auto;
+    transform: scale(2.0);
+    transform-origin: center;
+    object-fit: cover; /* Дополнительно для управления заполнением */
+    
+}
+.circle-item-content p {
+    grid-row: 2; /* Вторая строка */
+    font-size: 16px;
+    color:#ddc192;
+    margin-top: 50%; /* Отступ между изображением и текстом */
+}
+
+@media (max-width: 768px) {
+    .circle-item-content img {
+        transform: scale(1.2);
+    }
+    .circle-item-content p {
+        margin-top: 10%; 
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .circle-item-content img {
+        transform: scale(1.2);
+        
+    }
+    
+    
+}
+.circle-item {
+    animation: rotate-circle 40s linear infinite; /* Было 10s, стало 20s (в 2 раза медленнее) */
+}
+
+
+.ink {
+    margin-top: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section ul {
+  --col-gap: 2rem;
+  --barH: 1rem;
+  --roleH: 2rem;
+  --flapH: 2rem;
+
+  width: min(80rem, 90%);
+  margin-inline: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--col-gap);
+  padding-inline: calc(var(--col-gap) / 2);
+
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+}
+section ul li {
+  width: 10em;
+  display: grid;
+  grid-template:
+    "role"
+    "icon"
+    "title"
+    "descr";
+  align-items: flex-start;
+  gap: 1rem;
+  padding-block-end: calc(var(--flapH) + 1rem);
+  text-align: center;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.6) var(--roleH),
+    rgba(0, 0, 0, 0.4) calc(var(--roleH) + 0.5rem),
+    rgba(0, 0, 0, 0) calc(var(--roleH) + 0.5rem + 5rem)
+    
+  );
+  clip-path: polygon(
+    calc(var(--col-gap) / -2 - 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px ) calc(100% - var(--flapH)),
+    50% 100%,
+    calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH))
+  );
+}
+
+/* bar */
+section ul li::before {
+  content: "";
+  grid-area: role;
+  height: var(--barH);
+  width: calc(100% + var(--col-gap));
+  margin-left: calc(var(--col-gap) / -2);
+  margin-top: calc(var(--roleH) / 2 - var(--barH) / 2);
+  background: grey;
+  z-index: -1;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+/* role */
+section ul li::after {
+  content: "";
+  grid-area: role;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4)
+  );
+  height: var(--roleH);
+}
+
+section ul li .icon,
+section ul li .title,
+section ul li .descr {
+  padding-inline: 1rem;
+  color: white;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+section ul li .icon {
+  font-size: 3rem;
+}
+section ul li .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  
+  color: #ffb578;
+}
+
+section ul li .descr {
+  font-size: 0.9rem;
+  color: #cecece;
+  font-family: 'MyCustomFont2', sans-serif;
+  
+}
+
+.credits {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+.credits a {
+  color: var(--color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* CSS */
+ 
+
+ svg {
+     position: absolute;
+     top: -4000px;
+     left: -4000px;
+ }
+
+ /* Стили для родительского контейнера */
+.parent-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Или задайте конкретную ширину, если нужно */
+    height: 5vh; /* Высота контейнера может быть любой */
+    background-color: #0c101600;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+/* Стили для кнопки */
+#gooey-button {
+    position: relative;
+    padding: 1rem; /* Внутренний отступ */
+    font-size: calc(1rem + 2vw); /* Размер шрифта зависит от ширины экрана */
+    border: none;
+    color: #0c1016;
+    filter: url('#gooey');
+    background-color: #ffb578;
+    cursor: pointer;
+    width: 100%; /* Кнопка занимает 80% ширины родителя */
+    max-width: 500px; /* Максимальная ширина кнопки */
+    text-align: center; /* Текст по центру */
+    transition: transform 0.2s ease; /* Плавное увеличение при наведении */
+}
+
+
+#gooey-button h2{
+    font-size: 50%;
+}
+
+@media (max-width: 768px){
+    #gooey-button h2{
+        font-size: 50%;
+    }
+}
+
+/* При наведении на кнопку */
+
+
+#gooey-button:active {
+    transform: scale(1.05); /* Небольшое увеличение */
+}
+#gooey-button:default {
+    transform: scale(0.8); /* Небольшое увеличение */
+}
+
+/* Анимация пузырей */
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.bubbles .bubble {
+    background-color: #ffb578;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+}
+
+ /* Bubble animations */
+ .bubbles .bubble:nth-child(1) {
+     width: 50px;
+     height: 50px;
+     left: 150px;
+     animation: move-1 3.02s infinite;
+     animation-delay: 0.2s;
+ }
+
+ .bubbles .bubble:nth-child(2) {
+     width: 25px;
+     height: 25px;
+     left: 54px;
+     animation: move-2 3.04s infinite;
+     animation-delay: 0.4s;
+ }
+
+ .bubbles .bubble:nth-child(3) {
+     width: 25px;
+     height: 25px;
+     left: 97px;
+     animation: move-3 3.06s infinite;
+     animation-delay: 0.6s;
+ }
+
+ .bubbles .bubble:nth-child(4) {
+     width: 25px;
+     height: 25px;
+     left: 65px;
+     animation: move-4 3.08s infinite;
+     animation-delay: 0.8s;
+ }
+
+ .bubbles .bubble:nth-child(5) {
+     width: 25px;
+     height: 25px;
+     left: 88px;
+     animation: move-5 3.1s infinite;
+     animation-delay: 1s;
+ }
+
+ .bubbles .bubble:nth-child(6) {
+     width: 25px;
+     height: 25px;
+     left: 79px;
+     animation: move-6 3.12s infinite;
+     animation-delay: 1.2s;
+ }
+
+ .bubbles .bubble:nth-child(7) {
+     width: 25px;
+     height: 25px;
+     left: 61px;
+     animation: move-7 3.14s infinite;
+     animation-delay: 1.4s;
+ }
+
+ .bubbles .bubble:nth-child(8) {
+     width: 25px;
+     height: 25px;
+     left: 93px;
+     animation: move-8 3.16s infinite;
+     animation-delay: 1.6s;
+ }
+
+ .bubbles .bubble:nth-child(9) {
+     width: 25px;
+     height: 25px;
+     left: 72px;
+     animation: move-9 3.18s infinite;
+     animation-delay: 1.8s;
+ }
+
+ .bubbles .bubble:nth-child(10) {
+     width: 25px;
+     height: 25px;
+     left: 84px;
+     animation: move-10 3.2s infinite;
+     animation-delay: 2s;
+ }
+
+ /* Keyframes for animations */
+ @keyframes move-1 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -112px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes move-2 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -105px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes move-3 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -120px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes move-4 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -115px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes move-5 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -108px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes move-6 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -110px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes move-7 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -117px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes move-8 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -109px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes move-9 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -114px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes move-10 {
+     0% {
+         transform: translate(0, 0);
+     }
+     99% {
+         transform: translate(0, -111px);
+     }
+     100% {
+         transform: translate(0, 0);
+         opacity: 0;
+     }
+ }
+
+
+
+
+
+body {
+    margin: 0;
+    background-color: #f1dbb4;
+    overflow-x: hidden; 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    z-index: 1;
+    --footer-background: rgb(70, 90, 131);
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+}
+
+.dubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: none; /* По умолчанию отключено */
+}
+
+@media (min-width: 768px) {
+    .dubbles {
+        filter: url("#blob"); /* Включаем только на десктопах */
+    }
+}
+
+.dubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    animation: bubble-optimized var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 0);
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+    will-change: transform, opacity;
+}
+
+.content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 1rem;
+    background: var(--footer-background);
+    margin-bottom: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .content {
+        grid-template-columns: 1fr auto;
+        grid-gap: 4rem;
+        padding: 2rem;
+    }
+}
+
+/* Остальные стили остаются без изменений */
+
+@keyframes bubble-optimized {
+    0% {
+        transform: translate(-50%, 0) scale(1);
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, calc(-1 * var(--distance, 10rem))) scale(0);
+        opacity: 0;
+    }
+}
